@@ -1,0 +1,50 @@
+<html>
+<head>
+	<style>
+	html {
+  background: url("https://assets.website-files.com/595745982afc715251b786cd/5abb2d6fd4eb888e2a8d8087_sign-up-graphics.svg")
+ no-repeat center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+</style>
+</head>
+<body><fieldset style="width: 250px";align="center">
+					<fieldset align="left">
+					<legend><strong>Sign Up</strong></legend>
+						<p><em>Name        :</em><input type="text" id="Name"></br></p>
+						<p><em>Gender :</em></br><input type="radio" name="x"><em>MALE</em>
+						<input type="radio" name="x"><em>FEMALE</p></em>
+						<P><em>E-mail : </em><input type="email"></P>
+						<p><em>Mobilenumber:</em><input type="number"><br></p>
+						<p> <em>Mobile verification :</em> <input type="submit" value="Send OTP">
+						<p><em>Enter-Otp   :</em><input type="number"><br></p>
+						<p><em>Enter password:</em><input type="text" id="Enter password"><br></p>
+						<p><em>Confirm password:</em><input type="text"><br></p>
+						<button><a href="nameform.html">Submit</a></button>
+						<button onclick="validate()" form="nameform"></button>
+						<button id="Submit" value="cancel">Cancel</button>					</fieldset>
+	</fieldset>
+	<div id="status"></div>
+	<script type="text/javascript">
+		function validate(){
+				let divElement=document.getElementById('status');
+				let msg=document.createElement('p');
+				let x=document.getElementById('Name').value;
+				let y=document.getElementById('Enter password').value;
+				if(x==" "|| y==" " ){
+					msg.innerHTML="all fields are manditary";
+					msg.style.color="Red";
+				}
+				else{
+					msg.innerHTML="Success";
+					msg.style.color="Green";
+				}
+				
+		}
+	</script>
+
+</body>
+</html>
